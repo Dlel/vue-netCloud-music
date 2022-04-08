@@ -1,15 +1,16 @@
-/* test */
+/* 测试*/
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Find from '../views/find/Find.vue'
 
+const baseUrl = 'base.com'
 const originalPush = VueRouter.prototype.push
 VueRouter.prototype.push = function push(location) {
   return originalPush.call(this, location).catch(err => err)
 }
 
 Vue.use(VueRouter)
-
+console.log(baseUrl)
 const routes = [{ // 默认先进去的地址
     path: '/',
     redirect: '/find'
