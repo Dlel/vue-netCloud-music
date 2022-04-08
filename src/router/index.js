@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import Find from '../views/find/Find.vue'
 
 const baseUrl = 'base.com'
+const otherUrl = 'test.com'
 const originalPush = VueRouter.prototype.push
 VueRouter.prototype.push = function push(location) {
   return originalPush.call(this, location).catch(err => err)
@@ -11,6 +12,7 @@ VueRouter.prototype.push = function push(location) {
 
 Vue.use(VueRouter)
 console.log(baseUrl)
+console.log(otherUrl)
 const routes = [{ // 默认先进去的地址
     path: '/',
     redirect: '/find'
