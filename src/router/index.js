@@ -1,10 +1,10 @@
-/* 测试*/
+/* 测试 */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Find from '../views/find/Find.vue'
 
-const baseUrl = 'base.com'
-const otherUrl = 'test.com'
+const baseUrl = 'base1.com'
+const otherUrl = 'test1.com'
 const originalPush = VueRouter.prototype.push
 VueRouter.prototype.push = function push(location) {
   return originalPush.call(this, location).catch(err => err)
