@@ -5,7 +5,7 @@
         <img :src="logoUrl" alt="">
       </div>
     </div>
-    <!-- keep-alive 可以防止切换的来回重复请求，将第一次请求的数据缓存在dom里 -->
+    <!-- keep-alive 可以防止切换的来回重复请求，将第一次请求的数据缓存在Dom里 -->
     <keep-alive>
       <router-view/>
     </keep-alive>
